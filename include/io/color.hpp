@@ -1,4 +1,4 @@
-﻿#ifndef _COLOR_HPP_
+#ifndef _COLOR_HPP_
 #define _COLOR_HPP_
 
 #ifndef _COLOR
