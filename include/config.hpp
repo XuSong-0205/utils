@@ -51,6 +51,21 @@
 
 
 
+#define __STR(x)	#x
+#define _STR(x)		__STR(x)
+
+
+#define __CAT(a, b)	a ## b
+#define _CAT(a, b)	__CAT(a, b)
+
+
+#define UTILS_VERSION_MAJOR	0
+#define UTILS_VERSION_MINOR	1
+#define UTILS_VERSION_PATCH 0
+
+
+#define UTILS_VERSION_VALUE (UTILS_VERSION_MAJOR * 10000 + UTILS_VERSION_MINOR * 100 + UTILS_VERSION_PATCH)
+#define UTILS_VERSION_STR	_STR(_CAT(_CAT(_CAT(UTILS_VERSION_MAJOR, .), _CAT(UTILS_VERSION_MINOR, .)), UTILS_VERSION_PATCH))
 
 
 #endif // _CONFIG_HPP_
