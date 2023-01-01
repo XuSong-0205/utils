@@ -2,6 +2,7 @@
 #define _ARRAY_VIEW_HPP_
 
 #include <utility>
+#include <stdexcept>
 #include <type_traits>
 #include "utils.hpp"
 
@@ -78,7 +79,7 @@ struct array_view
 
 	array_view slice(size_type first = 0, size_type second = -1) noexcept
 	{
-		return const_cast<array_view>(const_cast<const array_view*>(this)->slice(first, second));
+		return const_cast<const array_view*>(this)->slice(first, second);
 	}
 
 	const array_view slice(size_type first = 0, size_type second = -1) const noexcept
